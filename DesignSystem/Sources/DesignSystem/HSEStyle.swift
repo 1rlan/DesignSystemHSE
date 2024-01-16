@@ -13,8 +13,9 @@ struct HSEStyle: Decodable {
     var cornerRadius: CGFloat? = 0
     var font: String? = "system"
     var tintColor: String? = "#0000FF"
-    var fontSize: Int? = 14
-    var borderWidth: Int? = 0
+    var fontSize: CGFloat? = 14
+    var borderWidth: CGFloat? = 0
     var borderColor: String? = "#000000"
+    var textColor: String? = "#FF0000"
     var fontWeight: String? = "regular"
 }
