@@ -4,7 +4,7 @@
 
 UIKit:
 
-<img src="https://github.com/1rlan/DesignSystemHSE/assets/90830436/9f8e2137-b1f3-4607-a7bf-dbb3c21b94a7" alt="UIKit Example" width="500" height="400">
+<img src="https://github.com/1rlan/DesignSystemHSE/assets/90830436/9f8e2137-b1f3-4607-a7bf-dbb3c21b94a7" alt="UIKit Example" width="700" height="350">
 
 
 SwiftUI:
