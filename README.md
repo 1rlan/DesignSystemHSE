@@ -3,9 +3,8 @@
 Буду рад любым комментариям)))
 
 UIKit:
-<img src="path/to/https://github.com/1rlan/DesignSystemHSE/assets/90830436/9f8e2137-b1f3-4607-a7bf-dbb3c21b94a7" width="500">
 
-![Simulator Screenshot - iPhone 15 - 2024-02-01 at 12 02 21](https://github.com/1rlan/DesignSystemHSE/assets/90830436/9f8e2137-b1f3-4607-a7bf-dbb3c21b94a7)
+![Simulator Screenshot - iPhone 15 - 2024-02-01 at 12 02 21](https://github.com/1rlan/DesignSystemHSE/assets/90830436/9f8e2137-b1f3-4607-a7bf-dbb3c21b94a7){width=300px height=200px}
 
 SwiftUI:
 
