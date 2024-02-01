@@ -9,4 +9,4 @@ UIKit:
 
 SwiftUI:
 
-![Снимок экрана 2024-02-01 в 12 03 33](https://github.com/1rlan/DesignSystemHSE/assets/90830436/bf74f8d3-0a33-43c0-8110-981e37395432)
+<img src="https://github.com/1rlan/DesignSystemHSE/assets/90830436/bf74f8d3-0a33-43c0-8110-981e37395432" alt="UIKit Example" width="350" height="700">
