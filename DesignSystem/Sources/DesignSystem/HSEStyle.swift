@@ -1,7 +1,7 @@
 //
 //  HSEStyle.swift
 //
-//  Created by Irlan Abushakhmanov on 16.01.2024
+//  Created by Irlan Abushakhmanov on 16.01.2024.
 //
 
 import Foundation
