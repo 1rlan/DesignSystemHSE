@@ -11,6 +11,7 @@ import UIKit
 class ImageCarouselView: UIView, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     private let cellIdentifier = "CarouselCell"
     private var currentIndex = 0
+    private var style: HSEStyle
     
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -46,28 +47,24 @@ class ImageCarouselView: UIView, UICollectionViewDataSource, UICollectionViewDel
         return button
     }()
     
-    init() {
+    init(images: [UIImage], style: HSEStyle) {
+        self.style = style
         super.init(frame: .zero)
+        self.photoArray = images
         setupCollectionView()
         setupButtons()
     }
     
     required init?(coder: NSCoder) {
+        self.style = HSEStyle(tintColor: "#000000")
         super.init(coder: coder)
         setupCollectionView()
         setupButtons()
     }
     
-    let buttonStyle = HSEStyle(
-        tintColor: "#2300FF"
-    )
-    
     private func setupButtons() {
-        
-        leftButton.addForButton(style: buttonStyle)
-        
-        
-        rightButton.addForButton(style: buttonStyle)
+        leftButton.addForButton(style: style)
+        rightButton.addForButton(style: style)
         
         leftButton.addTarget(self, action: #selector(leftButtonTapped), for: .touchUpInside)
         rightButton.addTarget(self, action: #selector(rightButtonTapped), for: .touchUpInside)
@@ -131,7 +128,7 @@ class ImageCarouselView: UIView, UICollectionViewDataSource, UICollectionViewDel
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as? MyCollectionViewCell else {
             fatalError("Unable to dequeue MyCollectionViewCell")
         }
-        cell.imageView.image = photoArray[indexPath.item]
+        cell.setup(image: photoArray[indexPath.item])
         return cell
     }
     
@@ -162,40 +159,6 @@ class ImageCarouselView: UIView, UICollectionViewDataSource, UICollectionViewDel
     }
 }
 
-class MyCollectionViewCell: UICollectionViewCell {
-    let imageView = UIImageView()
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupImageView()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setupImageView()
-    }
-    
-    private func setupImageView() {
-        // Настройка свойств UIImageView, например, contentMode, clipsToBounds и т.д.
-        contentView.layer.cornerRadius = 12
-        contentView.layer.masksToBounds = true
-        
-        imageView.contentMode = .scaleAspectFill
-        imageView.clipsToBounds = true
-        
-        // Добавление UIImageView к ячейке
-        contentView.addSubview(imageView)
-        
-        // Настройка layout constraints (положение и размер) для UIImageView
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
-        ])
-    }
-}
 
 // Пример использования оставоляю в комментариях.
 // Для внедрения ImageCarouselView в свой UIViewController
