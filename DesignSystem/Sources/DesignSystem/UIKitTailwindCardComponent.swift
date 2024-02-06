@@ -4,8 +4,26 @@
 //
 //  Created by Карим Хамид on 05.02.2024.
 //
+//
+//  UIKitTailwindCardComponent.swift
+//
+//
+//  Created by Карим Хамид on 05.02.2024.
+//
 
 import UIKit
+
+enum LayoutConstants {
+    static let imageViewHeight: CGFloat = 150
+    static let topPadding: CGFloat = 16
+    static let leadingPadding: CGFloat = 16
+    static let trailingPadding: CGFloat = -16
+    static let titleLabelTopPadding: CGFloat = 16
+    static let mainTextLabelTopPadding: CGFloat = 4
+    static let footerTextLabelTopPadding: CGFloat = 24
+    static let checkmarkImageViewSize: CGFloat = 24
+}
+
 
 @available(iOS 13, *)
 class UIKitCardView: UIView {
@@ -50,22 +68,7 @@ class UIKitCardView: UIView {
         imageView.layer.mask = maskLayer
     }
     
-    private func setupViews() {
-        imageView.backgroundColor = imageBackgroundColor
-
-        let path = UIBezierPath(roundedRect: imageView.bounds, byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: 16, height: 16))
-        let maskLayer = CAShapeLayer()
-        maskLayer.path = path.cgPath
-        imageView.layer.mask = maskLayer
-
-        self.backgroundColor = .white
-        self.layer.cornerRadius = 16
-        self.clipsToBounds = false
-        self.layer.shadowColor = UIColor.black.cgColor
-        self.layer.shadowOpacity = 0.5
-        self.layer.shadowRadius = 1
-        self.layer.shadowOffset = CGSize(width: 0, height: 0)
-
+    private func setupCardContent() {
         titleLabel.text = title
         titleLabel.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         mainTextLabel.text = mainText
@@ -76,6 +79,29 @@ class UIKitCardView: UIView {
         checkmarkImageView.image = UIImage(systemName: "checkmark")
         checkmarkImageView.tintColor = .blue
         checkmarkImageView.isHidden = true
+    }
+    
+    private func setupCard() {
+        self.backgroundColor = .white
+        self.layer.cornerRadius = 16
+        self.clipsToBounds = false
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOpacity = 0.5
+        self.layer.shadowRadius = 1
+        self.layer.shadowOffset = CGSize(width: 0, height: 0)
+    }
+    
+    private func setupViews() {
+        imageView.backgroundColor = imageBackgroundColor
+
+        let path = UIBezierPath(roundedRect: imageView.bounds, byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: 16, height: 16))
+        let maskLayer = CAShapeLayer()
+        maskLayer.path = path.cgPath
+        imageView.layer.mask = maskLayer
+
+        setupCard()
+
+        setupCardContent()
 
         addSubview(imageView)
         addSubview(titleLabel)
@@ -86,11 +112,9 @@ class UIKitCardView: UIView {
 
 
     private func setupLayout() {
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        mainTextLabel.translatesAutoresizingMaskIntoConstraints = false
-        footerTextLabel.translatesAutoresizingMaskIntoConstraints = false
-        checkmarkImageView.translatesAutoresizingMaskIntoConstraints = false
+        for element in [imageView, titleLabel, mainTextLabel, footerTextLabel, checkmarkImageView]{
+             element.translatesAutoresizingMaskIntoConstraints = false
+         }
 
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: self.topAnchor),
@@ -124,7 +148,7 @@ class UIKitCardView: UIView {
     }
 
     @objc private func toggleSelection() {
-        isSelected = !isSelected
+        isSelected.toggle()
         UIView.animate(withDuration: 0.3) { [weak self] in
             self?.layoutIfNeeded()
         }
