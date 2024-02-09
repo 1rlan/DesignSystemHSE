@@ -61,7 +61,7 @@ VStack(spacing: 16) {
 }.padding(.horizontal, 16)
 ```
 3. Результат:
-4. <img src="https://github.com/1rlan/DesignSystemHSE/blob/NikitaShubin_ChipsElement/swiftui_chip.gif" width="40%" height="40%"/>
+<img src="https://github.com/1rlan/DesignSystemHSE/blob/NikitaShubin_ChipsElement/swiftui_chip.gif" width="40%" height="40%"/>
 
 ## SwiftUI implementation preview
 <img src="https://github.com/1rlan/DesignSystemHSE/blob/NikitaShubin_ChipsElement/swiftui.gif" width="40%" height="40%"/>
