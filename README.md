@@ -1,3 +1,7 @@
-# PromIOS Development course 2024
-Репозиторий представляет из себя дизайн-систему, созданную студентами курса.\
-Ниже вы можете ознакомиться с `UIKit` и `SwiftUI` представлениями и их использованием. 
+# ChipsView
+
+### SwiftUI implementation
+![](https://github.com/1rlan/DesignSystemHSE/blob/NikitaShubin_ChipsElement/swiftui.gif)
+
+### UIKit implementation
+![](https://github.com/1rlan/DesignSystemHSE/blob/NikitaShubin_ChipsElement/uikit.gif)
