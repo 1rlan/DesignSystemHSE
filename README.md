@@ -35,8 +35,8 @@ struct ChipsModel: Identifiable {
 1. Создаём ViewModel (создаётся из массива чипов):
 ```
 let viewModel = ChipsViewModel(chipsArray: [
-            ChipsModel(name: "Deletable chip icon", isDeletable: true, icon: "heart.fill"),
-        ])
+    ChipsModel(name: "Deletable chip icon", isDeletable: true, icon: "heart.fill"),
+])
 ```
 2. Создаём ViewController:
 ```
@@ -46,7 +46,22 @@ viewController.viewModel = viewModel
 3. Вставляем уже дальше куда нам нужно, результат:
 <img src="https://github.com/1rlan/DesignSystemHSE/blob/NikitaShubin_ChipsElement/uikit_chip.gif" width="40%" height="40%"/>
 
-
+### SwiftUI
+1. Создаём ViewModel (создаётся из массива чипов):
+```
+@StateObject var viewModel = ChipsViewModel(chipsArray: [
+    ChipsModel(name: "deletable button", isDeletable: true, icon: "heart.fill"),
+])
+```
+2. Добавляем куда-нибудь ChipContainerView (например в VStack):
+```
+VStack(spacing: 16) {
+    ChipContainerView(viewModel: viewModel)
+    Spacer()
+}.padding(.horizontal, 16)
+```
+3. Результат:
+4. <img src="https://github.com/1rlan/DesignSystemHSE/blob/NikitaShubin_ChipsElement/swiftui_chip.gif" width="40%" height="40%"/>
 
 ## SwiftUI implementation preview
 <img src="https://github.com/1rlan/DesignSystemHSE/blob/NikitaShubin_ChipsElement/swiftui.gif" width="40%" height="40%"/>
