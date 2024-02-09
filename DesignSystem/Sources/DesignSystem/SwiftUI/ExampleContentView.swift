@@ -19,13 +19,13 @@ struct ContentView: View {
         ChipsModel(name: "Different colors!", isDeletable: true, icon: "star", primaryColor: .mint, secondaryColor: .black),
     ])
     
-        var body: some View {
-            VStack(spacing: 16) {
-                ChipContainerView(viewModel: viewModel)
-                Spacer()
-            }
-            .padding(.horizontal, 16)
+    var body: some View {
+        VStack(spacing: 16) {
+            ChipContainerView(viewModel: viewModel)
+            Spacer()
         }
+        .padding(.horizontal, 16)
+    }
 }
 
 #Preview {
