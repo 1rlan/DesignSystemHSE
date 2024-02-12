@@ -5,6 +5,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 public extension UIColor {
     convenience init?(hex: String?) {
@@ -29,5 +30,12 @@ public extension UIColor {
             blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
             alpha: 1
         )
+    }
+}
+
+public extension UIColor? {
+    var suiColor: Color? {
+        guard let self else { return nil }
+        return Color(self)
     }
 }
