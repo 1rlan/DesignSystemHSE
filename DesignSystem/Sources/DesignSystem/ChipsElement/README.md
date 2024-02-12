@@ -44,7 +44,7 @@ let viewController = ChipContainerViewController()
 viewController.viewModel = viewModel
 ```
 3. Вставляем уже дальше куда нам нужно, результат:
-<img src="https://github.com/1rlan/DesignSystemHSE/blob/NikitaShubin_ChipsElement/uikit_chip.gif" width="40%" height="40%"/>
+<img src="https://github.com/1rlan/DesignSystemHSE/blob/NikitaShubin_ChipsElement/DesignSystem/Sources/DesignSystem/ChipsElement/gifs/uikit_chip.gif" width="40%" height="40%"/>
 
 ### SwiftUI
 1. Создаём ViewModel (создаётся из массива чипов):
@@ -61,11 +61,11 @@ VStack(spacing: 16) {
 }.padding(.horizontal, 16)
 ```
 3. Результат:
-<img src="https://github.com/1rlan/DesignSystemHSE/blob/NikitaShubin_ChipsElement/swiftui_chip.gif" width="40%" height="40%"/>
+<img src="https://github.com/1rlan/DesignSystemHSE/blob/NikitaShubin_ChipsElement/DesignSystem/Sources/DesignSystem/ChipsElement/gifs/swiftui_chip.gif" width="40%" height="40%"/>
 
 ## SwiftUI implementation preview
-<img src="https://github.com/1rlan/DesignSystemHSE/blob/NikitaShubin_ChipsElement/swiftui.gif" width="40%" height="40%"/>
+<img src="https://github.com/1rlan/DesignSystemHSE/blob/NikitaShubin_ChipsElement/DesignSystem/Sources/DesignSystem/ChipsElement/gifs/swiftui.gif" width="40%" height="40%"/>
 
 ## UIKit implementation preview
-<img src="https://github.com/1rlan/DesignSystemHSE/blob/NikitaShubin_ChipsElement/uikit.gif" width="40%" height="40%"/>
+<img src="https://github.com/1rlan/DesignSystemHSE/blob/NikitaShubin_ChipsElement/DesignSystem/Sources/DesignSystem/ChipsElement/gifs/uikit.gif" width="40%" height="40%"/>
 
