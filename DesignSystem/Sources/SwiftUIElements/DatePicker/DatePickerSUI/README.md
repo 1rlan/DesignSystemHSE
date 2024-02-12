@@ -72,5 +72,4 @@
     ```swift
     present(datePickerVC, animated: true)
     ```
-
-Обе версии компонента позволяют легко интегрировать выбор даты в ваше приложение, предоставляя пользовательский интерфейс для выбора даты на платформах SwiftUI и UIKit.
+<img src="https://github.com/1rlan/DesignSystemHSE/blob/DatePicker/DesignSystem/Sources/SwiftUIElements/DatePicker/DatePickerSUI/DatePickerDemo.gif" width="30%" height="30%"/>
