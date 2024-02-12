@@ -15,4 +15,5 @@ let progressBar = ProgressBar(style: style)
 progressBar.setProgress(value: 0.8)
 ```
 
+
 <img src="Sources/progressBar.gif" width="250">
